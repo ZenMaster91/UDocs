@@ -5,4 +5,4 @@ Here you will find all the documentation, reports and litterature done during th
 
 > ### Naming convention
 > 
-> SUBJECT/YYYYMMDDHHmm<FILE_NAME>
+> SUBJECT/YYYYMMDDHHmm_FILE_NAME
