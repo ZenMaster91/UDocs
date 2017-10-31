@@ -9,7 +9,10 @@ Aquí encontrarás toda la documentación, informes y literatura hecha durante e
 Para conseguir mantener un orden entre todos los archivos se ha decidido seguir una estructura de nombrado para referirse a cualquier documento que se aloje en este repositorio. De tal forma el esquema es el siguiente:
 
 `SUBJECT/YYYYMMDDHHmm_FILE_NAME.EXTENSION`
+ 
+`ASIGNATURA/YYYYMMDDHHmm_NOMBRE_ARCHIVO.EXTENSION`
 
-> Example
+> Ejemplo / Example
 >
-> `REPOSITORIOS_DE_INFORMACION/20170417_FILE_SIN_NOMBRE.PDF`
+> `REPOSITORIOS_DE_INFORMACION/20170417_ARCHIVO_SIN_NOMBRE.PDF`
+> `REPOSITORIOS_DE_INFORMACION/20170417_FILE_WITHOUT_NAME.PDF`
