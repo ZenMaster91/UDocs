@@ -1,0 +1,41 @@
+Gestión de impagados
+
+
+Condiciones de entrada y clases de equivalencia:
+
+    - Tipo de cliente ( conRecivosImpagados, normales ) * No estoy seguro.
+    - Deuda ( cobrable, imposibleDeCobrar )
+    - Estado recibo ( devuelto, anulado, reclamado )
+    - Servicios ( añadir, quitar )
+    - Proximo recivo ( descuento, recargo )
+
+
+    Casos de prueba:
+
+        Tipo de cliente: CONRECIVOSIMPAGADOS
+
+            Deuda: COBRABLE 
+
+                Estado recivo: DEVUELTO
+
+                    Servicios: AÑADIR
+
+                        Próximo recivo: DESCUENTO 
+
+                        Próximo recivo: RECARGO 
+
+                    Servicios: QUITAR 
+
+                        Próximo recivo: DESCUENTO 
+
+                        Próximo recivo: RECARGO 
+
+                Estado recivo: RECLAMADO
+
+            Deuda: IMPOSIBLEDECOBRAR 
+
+                Estado recivo: ANULADO
+
+        Tipo de cliente: NORMAL
+
+                
