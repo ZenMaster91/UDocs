@@ -1,0 +1,105 @@
+Gestión de impagados
+
+
+Condiciones de entrada y clases de equivalencia:
+
+    - Cliente activo ( S, N ) // Bien.
+    - Existen recibos incorrientes ( S, N ) // Bien.
+    - Estado cobro ( devuelto, reclamado, anulado ) // No seguro. // Tipo de recibo primero
+    - Se puede cobrar deuda ( S, N )
+    - Añadir servicios ( S, N ) // Contrantos - servicios - tarifas. - descuentos o recargos.
+    - Quitar servicios ( S, N )
+    - Tipo servicio ( pago, gratuito ) // FALTA AÑADIR A CASOS DE PRUEBA.
+    - Incluir descuento / recargo ( S, N )
+    - Importe descuento / recargo ( <0, >0 )
+
+Salidas:
+
+    - Lista de clientes con recibos impagados.
+    - Estado del cobro del recibo.
+    - Valor del total del nuevo recibo.
+
+
+    Casos de prueba:
+
+        Cliente activo: S
+
+            Existen recibos incorrientes: S
+
+                Estado del cobro: DEVUELTO
+
+                    Se puede cobrar deuda: S
+
+                        Añadir servicios: S
+
+                            Quitar servicios: S
+
+                                // Añadir el tipo de los servicios añadidos o eliminados en este nivel.
+
+                                Añadir descuento: S
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                                Añadir descuento: N
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                            Quitar servicios: N
+
+                                Añadir descuento: S
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                                Añadir descuento: N
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                        Añadir servicios: N
+
+                            Quitar servicios: S
+
+                                Añadir descuento: S
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                                Añadir descuento: N
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                            Quitar servicios: N
+
+                                Añadir descuento: S
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                                Añadir descuento: N
+
+                                    -> Estado cobro: RECLAMADO
+                                    -> Comprobar nuevo importe de recibo.
+
+                    Se puede cobrar deuda: N
+
+                        -> Estado cobro :: ANULADO
+                        -> Cliente activo :: N
+
+                Estado del cobro: RECLAMADO
+
+                    // Se puede cambiar su estado a DEVUELTO, no se especifica ningúna condición.
+
+            Existen recibos incorrientes: N
+
+                ->
+
+        Cliente activo: N
+
+            // Comprobar por si existen problemas en la especificación.
+
+
+        //
